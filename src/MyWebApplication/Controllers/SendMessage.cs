@@ -2,11 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyWebApplication.Controllers;
 
-public class SendMessage : Controller
+[Route("api/[controller]")]
+[ApiController]
+public class SendMessage : ControllerBase
 {
     // GET
+    [HttpGet]
     public IActionResult Index()
     {
-        return View();
+        return Ok("Hello World!");
     }
 }
